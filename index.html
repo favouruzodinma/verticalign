@@ -39,11 +39,13 @@
             <main>
                 <img src="./WhatsApp_Image_2023-06-29_at_5.10.46_PM-removebg-preview.png" alt="">
                 <input type="checkbox" name="check" id="check">
-                <ul class="under">
-                    <label for="check" class="checkbox cancel"  style="margin-left: 300px; color:white;">
-                        <!-- <i class="ri-menu-line"></i> -->
+                <ul class="sidebar under" id="sidebar">
+                    <!-- <label for="check" class="checkbox cancel"  style="margin-left: 300px; color:white;">
                         X
-                    </label>
+                    </label> -->
+                    <div class="cancelDiv">
+                        <button id="cancel" class="cancel" onclick="cancelled()">X</button>
+                    </div>
                     <li><a href="#">BLOG</a></li>
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">RECOMMENDED PRODUCTS</a></li>
@@ -53,10 +55,13 @@
                     <button onclick="showInput()" class="search"><i class="ri-search-line"></i></button>
                 </ul>
                 <button onclick="showInput()" class="iconsearch"><i class="ri-search-line"></i></button>
-                <label for="check" class="checkbox">
+                <!-- <label for="check" class="checkbox">
                     <i class="ri-menu-line"></i> 
-                </label>
-               
+                </label> -->
+                 <button id="menu" onmouseover="enter()" onclick="opened()"
+                >
+                     <i class="ri-menu-line"></i> 
+                 </button>
             </main>
            
         </header>
@@ -103,7 +108,7 @@
       <br>
       <br>
       <br>
-
+    
       <script src="script.js"></script>
 </body>
 </html>

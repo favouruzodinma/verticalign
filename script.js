@@ -75,3 +75,19 @@ window.addEventListener("scroll", function(){
   }
  
 });
+
+function enter() {
+  menu.innerText = "☰ ";
+}
+
+// function out() {
+//   menu.innerText = "|||";
+// }
+
+function opened() {
+  sidebar.style.width = "400px";
+}
+
+function cancelled() {
+  sidebar.style.width = "0px";
+}

@@ -220,6 +220,176 @@
             <!-- </div> -->
         </div>
     </header>
+    <style>
+ body {
+  height: 200vh;
+  background-color: grey;
+  /* overflow: hidden; */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  justify-content: space-between;
+  /* padding: 0px 30px; */
+}
+
+.fixed {
+   position: fixed;
+   width: 100%;
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* .sidebar nav {
+  margin-left: 20px;
+} */
+
+.sidebar a {
+   color: white;
+   width: 300px;
+   text-decoration: none;
+   padding-left: 20px ;
+
+}
+
+.sidebar h3 {
+   padding: 10px 0px;
+}
+
+.sidebar h3:hover {
+   background-color: gray;
+}
+
+/* .sidebar a:hover {
+   background-color: gray;
+} */
+
+#menu,
+#cancel {
+  border: none;
+  background: transparent;
+  font-size: 35px;
+  font-weight: 900;
+  transition: 1s;
+}
+
+#menu:hover {
+   transform: rotate(90deg);
+}
+.cancelDiv {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+#cancel {
+  color: white;
+}
+
+#cancel:hover {
+   transform: rotate(360deg);
+}
+
+
+
+.btnDiv button {
+  height: 6vh;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 0px 10px;
+}
+
+#body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+#events {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+#input {
+  padding: 15px 120px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+
+#button {
+  padding: 15px 40px;
+  border: none;
+  margin-left: -4px;
+  background-color: black;
+  color: white;
+}
+
+#todo {
+  overflow-x: auto;
+  height: 40vh;
+  margin-top: 20px;
+}
+
+#todo div {
+  display: flex;
+  width: 54vw;
+  height: 7vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+}
+
+#todo button {
+  height: 7vh;
+  padding: 0px 10px;
+  border: none;
+}
+    </style>
+    <div class="nav">
+      <button
+        id="menu"
+        onmouseover="enter()"
+        onmouseleave="out()"
+        onclick="opened()"
+      >
+        |||
+      </button>
+      <div class="btnDiv">
+        <button id="undo">Undo</button>
+        <button id="clear">Clear</button>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="cancelDiv">
+        <button id="cancel" onclick="cancelled()">X</button>
+      </div>
+      <nav>
+        <h3><a href="#">Link1</a></h3>
+        <h3><a href="#">Link2</a></h3>
+        <h3><a href="#">Link3</a></h3>
+      </nav>
+    </div>
     
     <!-- <div class="nav">
         <button
@@ -256,7 +426,10 @@
       </div>
   
       <script>
-        let input = document.getElementById("input");
+       
+      </script> -->
+      <script>
+         let input = document.getElementById("input");
 let paragraph = document.getElementById("para");
 let button = document.getElementById("button");
 let events = document.getElementById("events");
@@ -332,6 +505,6 @@ button.addEventListener("click", function (e) {
 clear.onclick = function () {
   location.reload();
 };
-      </script> -->
+      </script>
 </body>
 </html>

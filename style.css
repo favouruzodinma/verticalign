@@ -198,6 +198,9 @@ main .checkbox{
 .iconsearch{
     display: none;
 }
+.cancel     {
+    display: none;
+}
 ul{
     display: flex;
     align-items: center;
@@ -228,12 +231,39 @@ ul li a{
     background-color: transparent;
 }
     @media screen and (max-width: 1200px){
-        /* .text-head , .text-para{
-            width: 80%;
-            resize: both;
-            padding-left: 15px;
-            color: aliceblue;
+        #menu,
+        #cancel {
+        border: none;
+        background: transparent;
+        font-size: 35px;
+        font-weight: 900;
+        /* transition: 1s; */
+        }
+
+        /* #menu:hover {
+        transform: rotate(90deg);
         } */
+        .cancelDiv {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        }
+        #cancel {
+        color: white;
+        }
+
+        /* #cancel:hover {
+        transform: rotate(360deg);
+        } */
+
+        .sidebar li {
+            padding: 10px 0px;
+        }
+        
+        .sidebar li:hover {
+            background-color: gray;
+        }
+
         
         main{
             height: 35px;
@@ -288,7 +318,7 @@ ul li a{
         header{
             background-color: white;
             width: 100vw;
-            height: 18.8vh;
+            height: 19.5vh;
             padding-right: 10px;
             position: fixed;
             
@@ -302,7 +332,7 @@ ul li a{
         header {
             flex-direction: column;
             /* align-items: flex-start; */
-            height: 11vh;
+            height: 15vh;
            
           }
           .form_div div{
@@ -318,10 +348,9 @@ ul li a{
               display: block;
               padding-right: 10px;
           }
-          ul{
+          /* ul{
               position: absolute;
               width: 100vw;
-              /* height: calc(50vh - 85px); */
               height: 120vh;
               left: -100%;
               top: -80px;
@@ -330,6 +359,20 @@ ul li a{
               justify-content: start;
               gap: 1rem;
               color: white;
+          } */
+          .sidebar {
+            height: 100vh;
+            background: linear-gradient(to left, rgb(209, 26, 26) , rgb(238, 78, 29));
+            color: white;
+            width: 0px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 1s;
+            flex-direction: column;
+            justify-content: start;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           }
           .iconsearch{
               display: block;
@@ -370,16 +413,10 @@ ul li a{
               color: aliceblue;
               padding: 12px 40px;
           }
-          /* .text-head , .text-para{
-              width: 100%;
-              padding-left: 15px;
-              color: aliceblue;
-              justify-content: center;
-          } */
           .btns button{
-              width: 27%;
+              width: 48%;
               border-radius: 25px;
-              padding: 10px;
+              padding: 15px;
               margin-top: 25px;
           }
          
@@ -392,7 +429,7 @@ ul li a{
     header {
       flex-direction: column;
       align-items: flex-start;
-      height: 11vh;
+      height: 15vh;
       /* padding: 25px; */
     }
     .form_div div{
@@ -411,20 +448,31 @@ ul li a{
         display: block;
         padding-right: 10px;
     }
-    ul{
+    /* ul{
         position: absolute;
         width: 100vw;
-        /* height: calc(50vh - 85px); */
         height: 95vh;
         left: -100%;
         top: -80px;
         background: linear-gradient(to left, rgb(209, 26, 26) , rgb(238, 78, 29));
-        /* flex-direction: column;
-        justify-content: start; */
         gap: 1rem;
         color: white;
         padding-top: -100rem;
-    }
+    } */
+    .sidebar {
+        height: 100vh;
+        background: linear-gradient(to left, rgb(209, 26, 26) , rgb(238, 78, 29));
+        color: white;
+        width: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        flex-direction: column;
+        justify-content: start;
+        transition: 1s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
     .iconsearch{
         display: block;
         border: none;
@@ -468,9 +516,9 @@ ul li a{
         align-items: center;
     } */
     .btns button{
-        width: 27%;
+        width: 57%;
         border-radius: 25px;
-        padding: 10px;
+        padding: 15px;
         margin-top: 25px;
     }
    
@@ -479,27 +527,12 @@ ul li a{
     }
   }
   @media screen and (max-width: 500px){
-    /* .text-head , .text-para{
-        width: 100%;
-        padding-left: 15px;
-        color: aliceblue;
-        justify-content: center;
-    } */
     .btns button{
         width: 30%;
         border-radius: 25px;
         padding: 10px;
         margin-top: 25px;
     }
-    /* .text-head{
-        padding-top: 15rem;
-        font-size: 40px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    } */
-    /* .text-para{
-        font-size: 16px;
-        width: 100%;
-    } */
     .form_div div{
         width: 83vw;
       }
@@ -512,12 +545,6 @@ ul li a{
     }
   }
   @media screen and (max-width: 450px){
-    /* .text-head , .text-para{
-        width: 100%;
-        padding-left: 15px;
-        color: aliceblue;
-        justify-content: center;
-    } */
     .btns button{
         display: inline-block;
         width: 35%;
@@ -525,18 +552,10 @@ ul li a{
         padding: 10px;
         margin-top: 25px;
     }
+    
     .form_div div{
         width: 83vw;
       }
-    /* .text-head{
-        padding-top: 15rem;
-        font-size: 30px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    } */
-    /* .text-para{
-        font-size: 16px;
-        width: 100%;
-    } */
     main img{
         width: 130px;
         height: 65px;
