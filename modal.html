@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <!-- <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+ header{
+    background-color: white;
+    width: 100vw;
+    height: 20vh;
+    /* overflow-y: hidden; */
+    position: absolute;
+}
+ form{
+    display: flex;
+    width: inherit;
+}
+.form_div{
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,rgba(31, 29, 29, 0.5), rgba(30, 71, 93, 255));
+    /* display: none; */
+}
+.form_div #cancel_modal{
+    height: 5%;
+    width: 45px;
+    margin-left: -45px;
+    margin-top: -300px;
+}
+.form_div div{
+    /* padding-top: 20px; */
+    border: 2px solid rgb(31, 24, 24);
+    width: 40%;
+    justify-content: center;
+    height: 50%;
+    background-color: black;
+}
+.inner_modal{
+    justify-content: center;
+    text-align: center;
+}
+.form_div h1{
+    padding-top: 40px;
+    color: aliceblue;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.form_div p{
+    color: aliceblue;
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+#input{
+    padding: 15px 120px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+#btn{
+    padding: 14px 40px;
+    border: none;
+    margin-left: -35px;
+    background: linear-gradient(to left, rgb(209, 26, 26) , rgb(238, 78, 29));
+    border-left: none;
+    font-size: medium;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+@media (max-width: 768px) {
+            .form_div {
+                width: 100%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .inner_modal {
+                font-size: 20px;
+            }
+            
+            #input {
+                margin-left: 10px;
+            }
+            
+            #cancel_modal {
+                font-size: 18px;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            /* text-align: center; */
+        }
+    
+        .form_div {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            /* text-align: center; */
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+
+       }
+    
+        .inner_modal {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    
+        p {
+            color: black;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+    
+        .div_form {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* align-items: center; */
+            margin-bottom: 20px;
+        }
+    
+        #input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            width: 300px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    
+        #btn {
+            padding: 10px 35px;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    
+        #cancel_modal {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 ,label{
+            color: black;
+        }
+        /* .gender{
+          display: flex;
+          flex-direction: column;
+        } */
+    </style>
+    
+    <header>
+        <br>
+        <div class="form_div" id="form_div">
+            <!-- <button onclick="cancel" id="cancel_modal">X</button> -->
+            <!-- <div> -->
+                <!-- <p class="inner_modal">What do you wish to know about VERTICAL ALIGN POSTURE COACHING</p> -->
+                <!-- <div class="div_form"> -->
+                  <form class="div_form">
+                   <h1 class="inner_modal">Sign Up......</h1>
+                    <input type="text" id="input" placeholder="Full Name">
+                    <input type="email" id="input" placeholder="Email Address">
+                    <input type="number" id="input" placeholder="Phone">
+                    <input type="date" id="input" placeholder="D.O.B">
+                    <input type="password" id="input" placeholder="Password">
+                    <label for="Gender">Gender</label>
+                    <div class="gender">
+                      <input type="radio" name="gender">
+                      <label for="male">Male</label><br>
+                      <input type="radio" name="gender">
+                      <label for="female">Female</label><br>
+                      <input type="radio" name="gender">
+                      <label for="others">others</label><br>
+                    </div>
+                    <button onclick="click" id="btn">Register Now</button>
+                    <p>Already have an Account <a href="login.html">Login</a></p>
+                </form>
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </header>
+    
+    <!-- <div class="nav">
+        <button
+          id="menu"
+          onmouseover="enter()"
+          onmouseleave="out()"
+          onclick="opened()"
+        >
+          |||
+        </button>
+        <div class="btnDiv">
+          <button id="undo">Undo</button>
+          <button id="clear">Clear</button>
+        </div>
+      </div>
+  
+      <div class="sidebar" id="sidebar">
+        <div class="cancelDiv">
+          <button id="cancel" onclick="cancelled()">X</button>
+        </div>
+        <nav>
+          <h3>Link 1</h3>
+          <h3>Link 2</h3>
+          <h3>Link 3</h3>
+        </nav>
+      </div>
+      <div id="body">
+        <form>
+          <input type="text" id="input" />
+          <button onclick="click" id="button">Submit</button>
+        </form>
+  
+        <div id="todo"></div>
+      </div>
+  
+      <script>
+        let input = document.getElementById("input");
+let paragraph = document.getElementById("para");
+let button = document.getElementById("button");
+let events = document.getElementById("events");
+let todo = document.getElementById("todo");
+let undo = document.getElementById("undo");
+let clear = document.getElementById("clear");
+let menu = document.getElementById("menu");
+let sidebar = document.getElementById("sidebar");
+let cancel = document.getElementById("cancel");
+
+function enter() {
+  menu.innerText = "☰ ";
+}
+
+function out() {
+  menu.innerText = "|||";
+}
+
+function opened() {
+  sidebar.style.width = "300px";
+}
+
+function cancelled() {
+  sidebar.style.width = "0px";
+}
+
+let todoArr = [];
+
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  let todoDiv = document.createElement("div");
+  let heading = document.createElement("h1");
+  let cancelBtn = document.createElement("button");
+  todoDiv.appendChild(heading);
+  todoDiv.appendChild(cancelBtn);
+  heading.innerText = input.value;
+  cancelBtn.innerText = "X";
+  console.log(todoArr);
+
+  if (input.value !== "") {
+    todoArr.push(todoDiv);
+    input.style.border = "none";
+    todoArr.map((item, index) => {
+      todo.appendChild(item);
+
+      cancelBtn.onclick = function () {
+        item.style.display = "none";
+        let indexes = todoArr[index];
+        console.log(index);
+        undo.onclick = function () {
+          if (undo.innerText === "Undo") {
+            undo.innerText = "Redo";
+          } else {
+            undo.innerText = "Undo";
+          }
+          if (indexes.style.display === "flex") {
+            todoArr.splice(index, 0, indexes);
+            indexes.style.display = "flex";
+          } else {
+            indexes.style.display = "flex";
+          }
+        };
+      };
+    });
+  } else {
+    input.style.border = "1px solid red";
+    alert("Input must have a value");
+  }
+
+  input.value = "";
+});
+
+clear.onclick = function () {
+  location.reload();
+};
+      </script> -->
+</body>
+</html>

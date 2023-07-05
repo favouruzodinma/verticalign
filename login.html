@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .form_div {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        .inner_modal {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    
+        p {
+            color: black;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    
+        .div_form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        #input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            width: 300px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    
+        #btn {
+            padding: 10px 35px;
+            width: 60%;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    
+        #cancel_modal {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 ,label{
+            color: black;
+        }
+        .gender{
+          display: flex;
+          flex-direction: column;
+        }
+    </style>
+    
+    <header>
+        <br>
+        <div class="form_div" id="form_div">
+            <button onclick="cancel" id="cancel_modal">X</button>
+            <div>
+                <h1 class="inner_modal">Sign Up......</h1>
+                <!-- <p class="inner_modal">What do you wish to know about VERTICAL ALIGN POSTURE COACHING</p> -->
+                <div class="div_form">
+                  <form>
+                    <input type="email" id="input" placeholder="Email Address">
+                    <input type="password" id="input" placeholder="Password">
+                    <button onclick="click" id="btn">Login</button>
+                    <p>Don't have an Account <a href="modal.html">Register</a></p>
+                </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+</body>
+</html>
